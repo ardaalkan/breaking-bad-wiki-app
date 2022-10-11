@@ -15,16 +15,14 @@ function CharacterList() {
     return <div>Loading...</div>;
   }
 
-  console.log(data);
-
   return (
-    <div key={data.id}>
-      {data.map((image: any) => (
-        <img
-          src={image.img}
-          alt="#"
-          className="w-72 h-96 flex items-center mx-auto"
-        />
+    <div
+      key={data.id}
+      //tailwind - masonry layout
+      className="columns-4 gap-3 w-[1200px] mx-auto space-y-3 pb-28 pt-6"
+    >
+      {data.map((data: any) => (
+        <Character {...data} />
       ))}
     </div>
   );

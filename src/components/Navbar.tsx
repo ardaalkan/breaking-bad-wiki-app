@@ -14,7 +14,7 @@ const Navbar = () => {
         Home Page
       </NavLink>
       <NavLink
-        to="/characters"
+        to="characters"
         className={(activeStyle) =>
           activeStyle.isActive
             ? "mr-12 text-black font-bold hover:bg-indigo-600 p-3 transition ease-in-out delay-75 rounded-md"
@@ -24,7 +24,7 @@ const Navbar = () => {
         Characters
       </NavLink>
       <NavLink
-        to="/quotes"
+        to="quotes"
         className={(activeStyle) =>
           activeStyle.isActive
             ? "mr-12 text-black font-bold hover:bg-indigo-600 p-3 transition ease-in-out delay-75 rounded-md"
@@ -34,7 +34,7 @@ const Navbar = () => {
         Quotes
       </NavLink>
       <NavLink
-        to="/episodes"
+        to="episodes"
         className={(activeStyle) =>
           activeStyle.isActive
             ? "mr-12 text-black font-bold hover:bg-indigo-600 p-3 transition ease-in-out delay-75 rounded-md"
