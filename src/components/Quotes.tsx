@@ -4,10 +4,10 @@ import QuotesCard from "./QuotesCard";
 import React from "react";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
-
+//revalidateOnFocus = true: auto revalidate when window gets focused.
 export default function Quotes() {
   return (
-    <SWRConfig value={{ fetcher }}>
+    <SWRConfig value={{ revalidateOnFocus: false, fetcher }}>
       <QuotesFunc />
     </SWRConfig>
   );
@@ -24,22 +24,22 @@ function QuotesFunc() {
     return <div className="font-bold text-gray-700 text-base">Loading...</div>;
   }
 
-  console.log(data);
   //TODO: Name Filter
   return (
     <DisplayQuotesFunc
-      data={data}
+      dataQuotes={data}
       quotes={[...new Set(data.map((quotes: any) => quotes.author))]}
     />
   );
 }
 
-function DisplayQuotesFunc({ data, quotes }: any) {
+function DisplayQuotesFunc({ dataQuotes, quotes }: any) {
   const [filterQuote, setFilterQuote] = React.useState(null);
-
+  console.log(filterQuote);
   const filteredQuote = filterQuote
-    ? data.filter((datas: any) => datas.quote)
-    : data;
+    ? dataQuotes.filter((datas: any) => datas.quote)
+    : dataQuotes;
+  console.log(filteredQuote);
 
   return (
     <div className="container mx-auto">
@@ -58,7 +58,7 @@ function DisplayQuotesFunc({ data, quotes }: any) {
           ))}
           {filterQuote && (
             <button
-            className="p-1 bg-slate-200"
+              className="p-1 bg-slate-200"
               onClick={() => {
                 setFilterQuote(null);
               }}
@@ -66,8 +66,8 @@ function DisplayQuotesFunc({ data, quotes }: any) {
               RESET
             </button>
           )}
-          {filteredQuote.map((data: any) => (
-            <QuotesCard {...data} />
+          {filteredQuote.map((dataQuotes: any) => (
+            <QuotesCard {...dataQuotes} />
           ))}
         </>
       </div>

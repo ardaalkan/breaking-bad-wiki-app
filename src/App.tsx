@@ -5,6 +5,7 @@ import Episodes from "./components/Episodes";
 import Navbar from "./components/Navbar";
 import Quotes from "./components/Quotes";
 import CharacterDetail from "./components/CharacterDetail";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/characters/:id" element={<CharacterDetail />} />
         <Route path="/quotes" element={<Quotes />} />
         <Route path="/episodes" element={<Episodes />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </>
   );

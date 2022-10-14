@@ -43,6 +43,16 @@ const Navbar = () => {
       >
         Episodes
       </NavLink>
+      <NavLink
+        to="contact"
+        className={(activeStyle) =>
+          activeStyle.isActive
+            ? "mr-12 text-black font-bold hover:bg-indigo-600 p-3 transition ease-in-out delay-75 rounded-md"
+            : "mr-12 text-white hover:bg-indigo-600 p-3 transition ease-in-out delay-75 rounded-md"
+        }
+      >
+        Contact
+      </NavLink>
     </div>
   );
 };
