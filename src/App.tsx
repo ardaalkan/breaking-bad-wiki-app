@@ -5,7 +5,7 @@ import Episodes from "./components/Episodes";
 import Navbar from "./components/Navbar";
 import Quotes from "./components/Quotes";
 import CharacterDetail from "./components/CharacterDetail";
-import Contact from "./components/Contact";
+import { Contact } from "./components/Contact";
 
 function App() {
   return (
