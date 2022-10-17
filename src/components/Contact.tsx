@@ -104,10 +104,10 @@ export const Contact: React.FC = () => {
 
       <div className="auth-form__footer">
         <Typography variant="subtitle1" component="span">
-          Don't have an account?{" "}
+          Lorem ipsum dolor sit amet, ?{" "}
         </Typography>
         <Typography variant="subtitle1" component="span" sx={{ color: "blue" }}>
-          Sign-up
+          consectetur?
         </Typography>
       </div>
     </div>
