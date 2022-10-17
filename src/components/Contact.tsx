@@ -107,7 +107,7 @@ export const Contact: React.FC = () => {
           Lorem ipsum dolor sit amet, ?{" "}
         </Typography>
         <Typography variant="subtitle1" component="span" sx={{ color: "blue" }}>
-          consectetur?
+          consectetur
         </Typography>
       </div>
     </div>
