@@ -24,7 +24,15 @@ function QuotesFunc() {
     return <div className="font-bold text-gray-700 text-base">Loading...</div>;
   }
 
-  //TODO: Name Filter
+  //TODO: Name Buttons Filter
+  //TODO: Name Buttons Filter
+  //TODO: Name Buttons Filter
+  //TODO: Name Buttons Filter
+  //TODO: Name Buttons Filter
+  //TODO: Name Buttons Filter
+  //TODO: Name Buttons Filter
+  //TODO: Name Buttons Filter
+
   return (
     <DisplayQuotesFunc
       dataQuotes={data}
@@ -39,15 +47,16 @@ function DisplayQuotesFunc({ dataQuotes, quotes }: any) {
   const filteredQuote = filterQuote
     ? dataQuotes.filter((datas: any) => datas.quote)
     : dataQuotes;
+
   console.log(filteredQuote);
 
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-1 gap-6 mt-6 mb-6">
-        <>
+        <div className="flex justify-evenly p-1 m-1">
           {quotes.map((quote: any) => (
             <button
-              className="p-1 bg-slate-300"
+              className="p-2 bg-slate-300 m-1 rounded-md hover:bg-slate-400 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110"
               onClick={() => {
                 setFilterQuote(quote);
               }}
@@ -56,20 +65,20 @@ function DisplayQuotesFunc({ dataQuotes, quotes }: any) {
               {quote}
             </button>
           ))}
-          {filterQuote && (
-            <button
-              className="p-1 bg-slate-200"
-              onClick={() => {
-                setFilterQuote(null);
-              }}
-            >
-              RESET
-            </button>
-          )}
-          {filteredQuote.map((dataQuotes: any) => (
-            <QuotesCard {...dataQuotes} />
-          ))}
-        </>
+        </div>
+        {filterQuote && (
+          <button
+            className="p-1 bg-slate-200 hover:bg-slate-300"
+            onClick={() => {
+              setFilterQuote(null);
+            }}
+          >
+            RESET
+          </button>
+        )}
+        {filteredQuote.map((dataQuotes: any) => (
+          <QuotesCard {...dataQuotes} />
+        ))}
       </div>
     </div>
   );

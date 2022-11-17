@@ -11,7 +11,7 @@ const Home = () => {
           <span className="text-green-400">Breaking Bad.</span>
         </span>
         <span className="ml-6 bg-green-700 text-white p-3 rounded-full hover:bg-green-600 duration-300">
-          <a href="https://www.breakingbadapi.com">Breaking Bad API</a>
+          <a href="https://www.breakingbadapi.com">Source: Breaking Bad API</a>
         </span>
       </div>
     </div>
