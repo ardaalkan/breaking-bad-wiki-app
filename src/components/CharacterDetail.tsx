@@ -12,25 +12,6 @@ interface characterType {
   occuption: string;
 }
 
-// const CharacterDetail = () => {
-//   const { id } = useParams();
-//   const [character, setCharacter] = useState<characterType>();
-
-//   useEffect(() => {
-//     fetch(`${API_URL_CHARACTERS}/${id}`)
-//       .then((response) => response.json())
-//       .then((data) => setCharacter(data));
-//   }, [id]);
-
-//   console.log(character);
-
-//   return (
-//     <pre>
-//       {character?.name}
-//     </pre>
-//   );
-// };
-
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 function CharacterDetail() {

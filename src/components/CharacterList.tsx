@@ -5,18 +5,18 @@ import Character from "./Character";
 import FilterName from "./FilterName";
 
 export const seasons = {
-  SEASON_ONE: "Season - 1",
-  SEASON_TWO: "Season - 2",
-  SEASON_THREE: "Season - 3",
-  SEASON_FOUR: "Season - 4",
-  SEASON_FIVE: "Season - 5",
+  SEASON_ONE: "Season : 1",
+  SEASON_TWO: "Season : 2",
+  SEASON_THREE: "Season : 3",
+  SEASON_FOUR: "Season : 4",
+  SEASON_FIVE: "Season : 5",
 };
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 function CharacterList() {
-  const { data, error } = useSWR(API_URL_CHARACTERS, fetcher);
   const [selectedName, setSelectedName] = useState("");
+  const { data, error } = useSWR(API_URL_CHARACTERS, fetcher);
 
   if (error) {
     return <div>Error...</div>;
