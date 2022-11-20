@@ -24,6 +24,8 @@ function QuotesFunc() {
     return <div className="font-bold text-gray-700 text-base">Loading...</div>;
   }
 
+  const quotes = [...new Set(data.map((quotes: any) => quotes.author))];
+
   //TODO: Name Buttons Filter
   //TODO: Name Buttons Filter
   //TODO: Name Buttons Filter
@@ -33,22 +35,13 @@ function QuotesFunc() {
   //TODO: Name Buttons Filter
   //TODO: Name Buttons Filter
 
-  return (
-    <DisplayQuotesFunc
-      dataQuotes={data}
-      quotes={[...new Set(data.map((quotes: any) => quotes.author))]}
-    />
-  );
+  return <DisplayQuotesFunc dataQuotes={data} quotes={quotes} />;
 }
 
 function DisplayQuotesFunc({ dataQuotes, quotes }: any) {
   const [filterQuote, setFilterQuote] = React.useState(null);
-  console.log(filterQuote);
-  const filteredQuote = filterQuote
-    ? dataQuotes.filter((datas: any) => datas.quote)
-    : dataQuotes;
 
-  console.log(filteredQuote);
+  console.log(filterQuote);
 
   return (
     <div className="container mx-auto">
@@ -76,7 +69,7 @@ function DisplayQuotesFunc({ dataQuotes, quotes }: any) {
             RESET
           </button>
         )}
-        {filteredQuote.map((dataQuotes: any) => (
+        {dataQuotes.map((dataQuotes: any) => (
           <QuotesCard {...dataQuotes} />
         ))}
       </div>

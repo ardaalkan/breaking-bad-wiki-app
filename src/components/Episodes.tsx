@@ -11,6 +11,8 @@ function CharacterList() {
 
   const [filter, setFilter] = useState("");
 
+  console.log(filter);
+
   if (error) {
     return <div>Error...</div>;
   }
@@ -32,7 +34,7 @@ function CharacterList() {
       //tailwind - masonry layout
       className="columns-1 gap-1 w-full mx-auto pt-6"
     >
-      <FilterEpisodes filter={filter} setFilter={setFilter} />
+      {/* <FilterEpisodes filter={filter} setFilter={setFilter} /> */}
       {data.map((data: any) => (
         <EpisodesCard {...data} />
       ))}

@@ -12,8 +12,6 @@ const FilterEpisodes = ({ filter, setFilter }: FilterNameProps) => {
     setFilter(e.target.value);
   };
 
-  console.log(filter);
-
   return (
     <select
       className="w-3/5 overflow-hidden shadow-lg mt-6 form-select appearance-none
