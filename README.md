@@ -1,26 +1,18 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
+# HSP-FrontEnd-Challenge
+HSP FrontEnd Challenge with ViteJs, React, Typescript, AntDesign
 
 Runs the app in the development mode.\
 
-`A wiki application that contains the characters, details and pictures of the legendary series Breaking Bad.`
+`HSP FrontEnd Challenge with ViteJs, React, Typescript, AntDesign.`
 
-| **Dependency**   | **Use**                                              |
-| ---------------- | ---------------------------------------------------- |
-| react            | React library                                        |
-| react-dom        | React library for DOM rendering                      |
-| react-icons      | Includes popular icons.                              |
-| react-router-dom | Includes popular icons.                              |
-| react-hook-form  | Performant, flexible and extensible forms lib.       |
-| swr              | SWR is a React Hooks library for data fetching.      |
-| yup              | Schema builder for value parsing and validation.     |
-| react-scripts    | Includes scripts used by Create React App.           |
-| tailwindcss      | A utility-first CSS framework.                       |
-| mui              | Material user interface library.                     |
+| **Dependency**   | **Use**                                               |
+| ---------------- | ----------------------------------------------------  |
+| react            | React library                                         |
+| react-dom        | React library for DOM rendering                       |
+| react-icons      | Includes popular icons.                               |
+| react-router-dom | Using React Router in web applications.               |
+| react-query      | Fast, efficient, cached data.                         |
+| typescript       | language for application scale JavaScript development.|
+| tailwindcss      | A utility-first CSS framework.                        |
+| antdesign        | Modular, user-friendly, customizable UI.              |
+| vitejs           | Native-ESM powered web dev build tool.                |
